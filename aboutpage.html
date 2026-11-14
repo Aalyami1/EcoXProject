@@ -18,6 +18,7 @@
   />
   <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
       <style>
         /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
         @layer properties;
@@ -974,7 +975,7 @@
               >EcoX</span
             >
           </div>
-          <div class="flex items-center gap-8">
+          <div class="flex items-center gap-8 nav-links">
             <a
               href="index.html"
               class="text-sm font-body font-medium text-primary-foreground opacity-80"
@@ -1027,6 +1028,7 @@
               
             >
           </div>
+          <button class="menu-toggle" type="button" aria-label="Menu">☰</button>
           <button
             class="bg-secondary text-secondary-foreground font-body font-medium text-sm px-6 py-2.5 rounded-sm"
             type="button"
@@ -1038,7 +1040,7 @@
           </button>
         </nav>
 
-        <div class="relative" style="padding-top: 60px">
+       <div class="relative z-10">
           <div class="bg-primary text-primary-foreground py-16 px-24">
             <div class="flex items-center gap-2 mb-3">
               <div class="w-8 h-0.5 bg-secondary"></div>
@@ -1820,6 +1822,39 @@
           </div>
         </footer>
       </div>
+            <style>
+  .export-wrapper { overflow-x: hidden; }
+  .menu-toggle {
+    display: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 28px;
+    border: 0;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    nav { flex-wrap: wrap; align-items: center; padding-left: 20px !important; padding-right: 20px !important; }
+   nav > button:not(.menu-toggle) { display: none !important; }
+   nav > div:first-child { flex: 1; min-width: 0; }
+    .menu-toggle { display: block; margin-left: auto; }
+    .nav-links { display: none !important; width: 100%; flex-direction: column; align-items: flex-start; gap: 16px; padding-top: 16px; order: 3; }
+    .nav-links.open { display: flex !important; }
+    .px-24, .px-16 { padding-left: 20px !important; padding-right: 20px !important; }
+    .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr !important; }
+    .flex.justify-between { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .bg-navy-dark.flex { flex-wrap: wrap; }
+    .bg-navy-dark.flex > div { flex: 1 1 50%; }
+    .text-4xl { font-size: 36px; }
+    .text-3xl { font-size: 28px; }
+    .max-w-3xl, .max-w-xl { max-width: 100%; }
+    nav.flex.justify-between { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0; }
+  }
+</style>
+<script>
+  document.querySelector('.menu-toggle').addEventListener('click', function () {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+</script>
     </body>
   </html>
   <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
