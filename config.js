@@ -45,8 +45,8 @@ window.ECOX = {
   projects: [
     {
       id: "al-noor-solar",
-      image: "assets/img/solar-farm-sunset.jpg",
-      gallery: ["assets/img/solar-panel-farm.jpg", "assets/img/photo-1466611653911-950815.jpg", "assets/img/photo-1497435334941-8c899e.jpg"],
+      image: "solar-farm-sunset.jpg",
+      gallery: ["solar-panel-farm.jpg", "photo-1466611653911-950815.jpg", "photo-1497435334941-8c899e.jpg"],
       year: "2022", duration: { en: "26 months", ar: "26 شهراً" },
       value: { en: "USD 210M", ar: "210 مليون دولار" },
       en: {
@@ -72,8 +72,8 @@ window.ECOX = {
     },
     {
       id: "smart-city",
-      image: "assets/img/modern-smart-city.jpg",
-      gallery: ["assets/img/photo-1518770660439-463619.jpg", "assets/img/photo-1497435334941-8c899e.jpg", "assets/img/photo-1454165804606-c3d57b.jpg"],
+      image: "modern-smart-city.jpg",
+      gallery: ["photo-1518770660439-463619.jpg", "photo-1497435334941-8c899e.jpg", "photo-1454165804606-c3d57b.jpg"],
       year: "2023", duration: { en: "34 months", ar: "34 شهراً" },
       value: { en: "USD 145M", ar: "145 مليون دولار" },
       en: {
@@ -99,8 +99,8 @@ window.ECOX = {
     },
     {
       id: "coastal-bridge",
-      image: "assets/img/engineering-suspension-bridge.jpg",
-      gallery: ["assets/img/photo-1503387762-592deb58e.jpg", "assets/img/engineering-suspension-bridge.jpg", "assets/img/photo-1454165804606-c3d57b.jpg"],
+      image: "engineering-suspension-bridge.jpg",
+      gallery: ["photo-1503387762-592deb58e.jpg", "engineering-suspension-bridge.jpg", "photo-1454165804606-c3d57b.jpg"],
       year: "2021", duration: { en: "40 months", ar: "40 شهراً" },
       value: { en: "USD 320M", ar: "320 مليون دولار" },
       en: {
@@ -126,8 +126,8 @@ window.ECOX = {
     },
     {
       id: "industrial-automation-hub",
-      image: "assets/img/industrial-manufacturing-facility.jpg",
-      gallery: ["assets/img/photo-1581091226825-a6a2a5.jpg", "assets/img/industrial-manufacturing-facility.jpg", "assets/img/photo-1518770660439-463619.jpg"],
+      image: "industrial-manufacturing-facility.jpg",
+      gallery: ["photo-1581091226825-a6a2a5.jpg", "industrial-manufacturing-facility.jpg", "photo-1518770660439-463619.jpg"],
       year: "2024", duration: { en: "18 months", ar: "18 شهراً" },
       value: { en: "USD 85M", ar: "85 مليون دولار" },
       en: {
@@ -153,8 +153,8 @@ window.ECOX = {
     },
     {
       id: "wind-energy-complex",
-      image: "assets/img/wind-turbines-desert.jpg",
-      gallery: ["assets/img/wind-turbines-desert.jpg", "assets/img/photo-1466611653911-950815.jpg", "assets/img/photo-1454165804606-c3d57b.jpg"],
+      image: "wind-turbines-desert.jpg",
+      gallery: ["wind-turbines-desert.jpg", "photo-1466611653911-950815.jpg", "photo-1454165804606-c3d57b.jpg"],
       year: "2023", duration: { en: "22 months", ar: "22 شهراً" },
       value: { en: "USD 190M", ar: "190 مليون دولار" },
       en: {
@@ -180,8 +180,8 @@ window.ECOX = {
     },
     {
       id: "environmental-remediation",
-      image: "assets/img/modern-green-environmental.jpg",
-      gallery: ["assets/img/modern-green-environmental.jpg", "assets/img/photo-1497435334941-8c899e.jpg", "assets/img/photo-1466611653911-950815.jpg"],
+      image: "modern-green-environmental.jpg",
+      gallery: ["modern-green-environmental.jpg", "photo-1497435334941-8c899e.jpg", "photo-1466611653911-950815.jpg"],
       year: "2024", duration: { en: "16 months", ar: "16 شهراً" },
       value: { en: "USD 60M", ar: "60 مليون دولار" },
       en: {
