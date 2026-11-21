@@ -9,7 +9,7 @@
 window.ECOX = {
   company: {
     name:        { en: "EcoX", ar: "إكو إكس" },
-    phone:       "+966 50 160 2619",
+    phone:       "+966 50 660 6615",
     email:       "info@ecox.com",
     careersEmail:"careers@ecox.com",
     address:     { en: "Kingdom of Saudi Arabia, Al Khobar", ar: "المملكة العربية السعودية، الخبر" },
