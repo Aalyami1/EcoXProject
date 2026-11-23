@@ -1051,87 +1051,86 @@
               class="col-span-2 bg-surface border border-border rounded-lg p-10"
             >
               <h3 class="font-headings font-bold text-xl text-primary mb-6">
-                أرسل لنا رسالة
+                اطلب عرض سعر
               </h3>
               <form id="contact-form" class="space-y-4" novalidate>
                 <div class="grid grid-cols-2 gap-6">
                   <div>
-                    <label
-                      class="block font-body text-sm text-primary font-medium mb-2"
-                      >الاسم الكامل</label
-                    >
-                    <input id="f-name" name="name" autocomplete="name" required
-                      type="text"
-                      placeholder="اسمك"
-                      class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"
-                    />
+                    <label for="f-name" class="block font-body text-sm text-primary font-medium mb-2">الاسم الكامل *</label>
+                    <input id="f-name" name="fullName" autocomplete="name" required type="text" placeholder="اسمك" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
                   </div>
                   <div>
-                    <label
-                      class="block font-body text-sm text-primary font-medium mb-2"
-                      >البريد الإلكتروني</label
-                    >
-                    <input id="f-email" name="email" autocomplete="email" required
-                      type="email"
-                      placeholder="your@email.com"
-                      class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"
-                    />
+                    <label for="f-email" class="block font-body text-sm text-primary font-medium mb-2">البريد الإلكتروني *</label>
+                    <input id="f-email" name="email" autocomplete="email" required type="email" placeholder="your@email.com" dir="ltr" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                  <div>
+                    <label for="f-company" class="block font-body text-sm text-primary font-medium mb-2">اسم الشركة</label>
+                    <input id="f-company" name="companyName" autocomplete="organization" type="text" placeholder="شركتك" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
+                  </div>
+                  <div>
+                    <label for="f-phone" class="block font-body text-sm text-primary font-medium mb-2">الجوال / واتساب</label>
+                    <input id="f-phone" name="phone" autocomplete="tel" type="tel" placeholder="+966 5x xxx xxxx" dir="ltr" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                  <div>
+                    <label for="f-service" class="block font-body text-sm text-primary font-medium mb-2">نوع الخدمة *</label>
+                    <select id="f-service" name="serviceType" required class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-muted-foreground focus:outline-none focus:border-secondary">
+                    <option value="">اختر خدمة</option>
+                    <option value="Consulting">الاستشارات</option>
+                    <option value="Design">التصميم</option>
+                    <option value="Inspection">الفحص</option>
+                    <option value="Oil Spill Response">الاستجابة للانسكابات النفطية</option>
+                    <option value="Other">أخرى</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="f-location" class="block font-body text-sm text-primary font-medium mb-2">موقع المشروع</label>
+                    <input id="f-location" name="projectLocation" type="text" placeholder="المدينة / الموقع" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                  <div>
+                    <label for="f-budget" class="block font-body text-sm text-primary font-medium mb-2">نطاق الميزانية</label>
+                    <select id="f-budget" name="budgetRange" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-muted-foreground focus:outline-none focus:border-secondary">
+                    <option value="">اختر النطاق (اختياري)</option>
+                    <option value="Under 50,000 SAR">أقل من 50,000 ريال</option>
+                    <option value="50,000 - 200,000 SAR">50,000 - 200,000 ريال</option>
+                    <option value="200,000 - 1,000,000 SAR">200,000 - 1,000,000 ريال</option>
+                    <option value="Over 1,000,000 SAR">أكثر من 1,000,000 ريال</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="f-deadline" class="block font-body text-sm text-primary font-medium mb-2">الموعد النهائي</label>
+                    <input id="f-deadline" name="deadline" type="date" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
                   </div>
                 </div>
 
                 <div>
-                  <label
-                    class="block font-body text-sm text-primary font-medium mb-2"
-                    >الشركة</label
-                  >
-                  <input id="f-company" name="company" autocomplete="organization"
-                    type="text"
-                    placeholder="شركتك"
-                    class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"
-                  />
+                  <label for="f-message" class="block font-body text-sm text-primary font-medium mb-2">وصف المشروع *</label>
+                  <textarea id="f-message" name="projectDescription" required rows="5" placeholder="أخبرنا عن مشروعك: النطاق، ظروف الموقع، الجدول الزمني..." class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"></textarea>
                 </div>
 
-                <div>
-                  <label
-                    class="block font-body text-sm text-primary font-medium mb-2"
-                    >الخدمة المهتم بها</label
-                  >
-                  <select id="f-service" name="service" required
-                    class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-muted-foreground focus:outline-none focus:border-secondary"
-                  >
-                    <option value="">اختر خدمة</option>
-                    <option>الطاقة المتجددة</option>
-                    <option>الهندسة الميكانيكية</option>
-                    <option>الكهرباء والأتمتة</option>
-                    <option>الهندسة المدنية والإنشائية</option>
-                    <option>الهندسة البيئية</option>
-                    <option>إدارة المشاريع</option>
-                  </select>
+                <!-- Anti-spam honeypot: hidden from people, bots fill it in. Do not remove. -->
+                <div class="hp-field" aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+                  <label for="f-website">اترك هذا الحقل فارغاً</label>
+                  <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off" />
                 </div>
 
-                <div>
-                  <label
-                    class="block font-body text-sm text-primary font-medium mb-2"
-                    >الرسالة</label
-                  >
-                  <textarea id="f-message" name="message" required
-                    rows="5"
-                    placeholder="أخبرنا عن مشروعك..."
-                    class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  class="bg-secondary text-secondary-foreground font-body font-medium text-sm px-8 py-3.5 rounded-sm w-full"
-                >
-                  إرسال الرسالة
+                <button type="submit" class="bg-secondary text-secondary-foreground font-body font-medium text-sm px-8 py-3.5 rounded-sm w-full">
+                  اطلب عرض السعر
                 </button>
               </form>
               <div id="form-success" class="form-success" role="status" aria-live="polite">
                 <div class="x-seal">✓</div>
                 <h3>شكراً لك!</h3>
-                <p>تم استلام رسالتك. سيتواصل معك فريقنا خلال يوم عمل واحد.</p>
+                <p>تم استلام طلب عرض السعر. أرسلنا لك تأكيداً عبر البريد الإلكتروني، وسيتواصل معك فريقنا خلال يوم عمل واحد.</p>
+                <p id="form-ref" class="form-ref" hidden>رقمك المرجعي: <strong dir="ltr"></strong></p>
                 <button type="button" id="form-again" class="x-btn">إرسال رسالة أخرى</button>
               </div>
             </div>

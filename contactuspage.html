@@ -1051,87 +1051,86 @@
               class="col-span-2 bg-surface border border-border rounded-lg p-10"
             >
               <h3 class="font-headings font-bold text-xl text-primary mb-6">
-                Send us a Message
+                Request a Quote
               </h3>
               <form id="contact-form" class="space-y-4" novalidate>
                 <div class="grid grid-cols-2 gap-6">
                   <div>
-                    <label
-                      class="block font-body text-sm text-primary font-medium mb-2"
-                      >Full Name</label
-                    >
-                    <input id="f-name" name="name" autocomplete="name" required
-                      type="text"
-                      placeholder="Your name"
-                      class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"
-                    />
+                    <label for="f-name" class="block font-body text-sm text-primary font-medium mb-2">Full Name *</label>
+                    <input id="f-name" name="fullName" autocomplete="name" required type="text" placeholder="Your name" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
                   </div>
                   <div>
-                    <label
-                      class="block font-body text-sm text-primary font-medium mb-2"
-                      >Email</label
-                    >
-                    <input id="f-email" name="email" autocomplete="email" required
-                      type="email"
-                      placeholder="your@email.com"
-                      class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"
-                    />
+                    <label for="f-email" class="block font-body text-sm text-primary font-medium mb-2">Email *</label>
+                    <input id="f-email" name="email" autocomplete="email" required type="email" placeholder="your@email.com" dir="ltr" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                  <div>
+                    <label for="f-company" class="block font-body text-sm text-primary font-medium mb-2">Company Name</label>
+                    <input id="f-company" name="companyName" autocomplete="organization" type="text" placeholder="Your company" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
+                  </div>
+                  <div>
+                    <label for="f-phone" class="block font-body text-sm text-primary font-medium mb-2">Phone / WhatsApp</label>
+                    <input id="f-phone" name="phone" autocomplete="tel" type="tel" placeholder="+966 5x xxx xxxx" dir="ltr" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                  <div>
+                    <label for="f-service" class="block font-body text-sm text-primary font-medium mb-2">Service Type *</label>
+                    <select id="f-service" name="serviceType" required class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-muted-foreground focus:outline-none focus:border-secondary">
+                    <option value="">Select a service</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Design">Design</option>
+                    <option value="Inspection">Inspection</option>
+                    <option value="Oil Spill Response">Oil Spill Response</option>
+                    <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="f-location" class="block font-body text-sm text-primary font-medium mb-2">Project Location</label>
+                    <input id="f-location" name="projectLocation" type="text" placeholder="City / site" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6">
+                  <div>
+                    <label for="f-budget" class="block font-body text-sm text-primary font-medium mb-2">Budget Range</label>
+                    <select id="f-budget" name="budgetRange" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-muted-foreground focus:outline-none focus:border-secondary">
+                    <option value="">Select a range (optional)</option>
+                    <option value="Under 50,000 SAR">Under 50,000 SAR</option>
+                    <option value="50,000 - 200,000 SAR">50,000 - 200,000 SAR</option>
+                    <option value="200,000 - 1,000,000 SAR">200,000 - 1,000,000 SAR</option>
+                    <option value="Over 1,000,000 SAR">Over 1,000,000 SAR</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="f-deadline" class="block font-body text-sm text-primary font-medium mb-2">Deadline</label>
+                    <input id="f-deadline" name="deadline" type="date" class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary" />
                   </div>
                 </div>
 
                 <div>
-                  <label
-                    class="block font-body text-sm text-primary font-medium mb-2"
-                    >Company</label
-                  >
-                  <input id="f-company" name="company" autocomplete="organization"
-                    type="text"
-                    placeholder="Your Company"
-                    class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"
-                  />
+                  <label for="f-message" class="block font-body text-sm text-primary font-medium mb-2">Project Description *</label>
+                  <textarea id="f-message" name="projectDescription" required rows="5" placeholder="Tell us about your project: scope, site conditions, timeline..." class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"></textarea>
                 </div>
 
-                <div>
-                  <label
-                    class="block font-body text-sm text-primary font-medium mb-2"
-                    >Service Interest</label
-                  >
-                  <select id="f-service" name="service" required
-                    class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-muted-foreground focus:outline-none focus:border-secondary"
-                  >
-                    <option value="">Select a service</option>
-                    <option>Renewable Energy</option>
-                    <option>Mechanical Engineering</option>
-                    <option>Electrical & Automation</option>
-                    <option>Civil & Structural</option>
-                    <option>Environmental Engineering</option>
-                    <option>Project Management</option>
-                  </select>
+                <!-- Anti-spam honeypot: hidden from people, bots fill it in. Do not remove. -->
+                <div class="hp-field" aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+                  <label for="f-website">Leave this field empty</label>
+                  <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off" />
                 </div>
 
-                <div>
-                  <label
-                    class="block font-body text-sm text-primary font-medium mb-2"
-                    >Message</label
-                  >
-                  <textarea id="f-message" name="message" required
-                    rows="5"
-                    placeholder="Tell us about your project..."
-                    class="w-full bg-input border border-border rounded-md px-4 py-3 font-body text-sm text-primary placeholder:text-muted-foreground focus:outline-none focus:border-secondary"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  class="bg-secondary text-secondary-foreground font-body font-medium text-sm px-8 py-3.5 rounded-sm w-full"
-                >
-                  Send Message
+                <button type="submit" class="bg-secondary text-secondary-foreground font-body font-medium text-sm px-8 py-3.5 rounded-sm w-full">
+                  Request a Quote
                 </button>
               </form>
               <div id="form-success" class="form-success" role="status" aria-live="polite">
                 <div class="x-seal">✓</div>
                 <h3>Thank you!</h3>
-                <p>Your message has been received. Our team will get back to you within one business day.</p>
+                <p>Your quote request has been received. We have emailed you a confirmation and our team will get back to you within one business day.</p>
+                <p id="form-ref" class="form-ref" hidden>Your reference number: <strong dir="ltr"></strong></p>
                 <button type="button" id="form-again" class="x-btn">Send another message</button>
               </div>
             </div>

@@ -248,8 +248,16 @@
         btn.disabled = false; btn.textContent = label; form.reset();
       };
       if (demo) { setTimeout(done, 900); return; }
+      var refBox = $("#form-ref");
+      if (refBox) refBox.hidden = true;
       fetch(CFG.formEndpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-        .then(function (r) { if (!r.ok) throw new Error(r.status); done(); })
+        .then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (data) {
+            if (!r.ok || data.success === false) throw new Error(data.message || r.status);
+            if (refBox && data.reference) { $("strong", refBox).textContent = data.reference; refBox.hidden = false; }
+            done();
+          });
+        })
         .catch(function () { btn.disabled = false; btn.textContent = label; alert(T.error); });
     });
     var again = $("#form-again");

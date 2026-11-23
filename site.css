@@ -304,3 +304,5 @@ button[type="submit"][disabled] { opacity: .7; cursor: progress; }
   nav, .x-top, .menu-toggle, footer { display: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+.form-success .form-ref { margin-top: -12px; color: var(--x-primary); font-weight: 600; }
+.form-success .form-ref[hidden] { display: none; }

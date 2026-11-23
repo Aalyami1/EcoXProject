@@ -38,7 +38,7 @@ window.ECOX = {
   /* Contact form: paste a Formspree / Getform / backend URL here to receive
      real messages. While empty, the form runs in demo mode (validates and
      shows a success message, but nothing is sent). */
-  formEndpoint: "",
+  formEndpoint: "https://princeali.app.n8n.cloud/webhook/ecox-quote", /* n8n workflow "EcoX Quote Request Intake" */
 
   /* Project case studies — power the "View Details" pages (project.html / project2.html).
      Order matches the cards on the Projects page. */
