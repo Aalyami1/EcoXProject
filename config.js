@@ -40,6 +40,10 @@ window.ECOX = {
      shows a success message, but nothing is sent). */
   formEndpoint: "https://princeali.app.n8n.cloud/webhook/ecox-quote", /* n8n workflow "EcoX Quote Request Intake" */
 
+  /* AI chat assistant bubble (n8n workflow "EcoX Website Chat Assistant").
+     Set to "" to hide the chat bubble on every page. */
+  chatWebhook: "https://princeali.app.n8n.cloud/webhook/2308af82-b6f6-45c8-a281-4fc22a9a7aea/chat",
+
   /* Project case studies — power the "View Details" pages (project.html / project2.html).
      Order matches the cards on the Projects page. */
   projects: [
